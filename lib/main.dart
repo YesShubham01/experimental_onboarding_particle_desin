@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 
 import 'core/theme/app_theme.dart';
 import 'core/theme/theme_provider.dart';
-import 'features/auth/presentation/ui/widgets/onboarding_screen.dart';
+import 'features/auth/presentation/ui/auth_screen.dart';
 
 void main() {
   runApp(const AppWrapper());
@@ -32,7 +32,7 @@ class ExpenseTrackerApp extends StatelessWidget {
       darkTheme: AppTheme.darkTheme,
       themeMode: context.watch<ThemeProvider>().themeMode,
       title: 'Expense Tracker App',
-      home: const OnboardingScreen(),
+      home: const AuthScreen(),
     );
   }
 }
