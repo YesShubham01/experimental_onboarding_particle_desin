@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:expense_tracker_app/features/rupee/rupee_widget.dart';
+import 'package:expense_tracker_app/features/rupee/sunflower_to_rupee.dart';
 
 import '../../../home/presentation/ui/home_screen.dart';
 
@@ -44,7 +44,7 @@ class _AuthScreenState extends State<AuthScreen> {
                       opacity: _rupeeOpacity,
                       duration: const Duration(milliseconds: 800),
                       curve: Curves.easeOutCubic,
-                      child: const IgnorePointer(child: RupeePremiumWidget()),
+                      child: const IgnorePointer(child: SunflowerToRupee()),
                     ),
                     Positioned.fill(
                       child: IgnorePointer(

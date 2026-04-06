@@ -4,10 +4,7 @@ import 'package:flutter/material.dart';
 
 /// Particle that eases onto a stroke sample.
 class StrokeParticle {
-  StrokeParticle({
-    required this.position,
-    required this.target,
-  });
+  StrokeParticle({required this.position, required this.target});
 
   Offset position;
   final Offset target;
@@ -34,10 +31,7 @@ List<Offset> samplePath(Path path, int totalSamples) {
 
   for (final m in metrics) {
     if (m.length <= 0) continue;
-    final n = math.max(
-      2,
-      (totalSamples * m.length / totalLength).round(),
-    );
+    final n = math.max(2, (totalSamples * m.length / totalLength).round());
     for (var i = 0; i < n; i++) {
       final t = n <= 1 ? 0.0 : i / (n - 1);
       final tangent = m.getTangentForOffset(m.length * t);

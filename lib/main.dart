@@ -31,7 +31,7 @@ class ExpenseTrackerApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: context.watch<ThemeProvider>().themeMode,
-      title: 'Expense Tracker App',
+      title: 'Experiment Particle Animation',
       home: const AuthScreen(),
     );
   }

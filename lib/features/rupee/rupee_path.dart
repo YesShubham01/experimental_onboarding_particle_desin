@@ -33,8 +33,7 @@ class _SvgPathSink extends PathProxy {
     double y2,
     double x3,
     double y3,
-  ) =>
-      path.cubicTo(x1, y1, x2, y2, x3, y3);
+  ) => path.cubicTo(x1, y1, x2, y2, x3, y3);
 
   @override
   void lineTo(double x, double y) => path.lineTo(x, y);
@@ -62,10 +61,8 @@ Path scalePathToSize(Path path, Size size, {double padding = 0.94}) {
   final bounds = path.getBounds();
   if (bounds.width <= 0 || bounds.height <= 0) return path;
 
-  final scale = math.min(
-        size.width / bounds.width,
-        size.height / bounds.height,
-      ) *
+  final scale =
+      math.min(size.width / bounds.width, size.height / bounds.height) *
       padding;
 
   final matrix = Matrix4.identity()
